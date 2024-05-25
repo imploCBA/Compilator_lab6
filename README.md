@@ -1,0 +1,1 @@
+# Compilator_lab6
