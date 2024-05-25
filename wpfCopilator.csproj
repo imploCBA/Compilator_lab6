@@ -1,0 +1,87 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Cancel.png" />
+    <None Remove="Assets\Copy.png" />
+    <None Remove="Assets\Cut.png" />
+    <None Remove="Assets\Help.png" />
+    <None Remove="Assets\Info.png" />
+    <None Remove="Assets\OIG3.ico" />
+    <None Remove="Assets\OIG3.png" />
+    <None Remove="Assets\Open.png" />
+    <None Remove="Assets\PanelTool.png" />
+    <None Remove="Assets\Paste.png" />
+    <None Remove="Assets\Play.png" />
+    <None Remove="Assets\Return.png" />
+    <None Remove="Assets\Save.png" />
+    <None Remove="Create.png" />
+    <None Remove="ManualPages\ManualAssets\CreateNewFile.png" />
+    <None Remove="ManualPages\ManualAssets\MenuEdit.png" />
+    <None Remove="ManualPages\ManualAssets\PanelTool.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LocalizatorHelper">
+      <HintPath>bin\Release\net7.0-windows\LocalizatorHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Cancel.png" />
+    <Resource Include="Assets\Copy.png" />
+    <Resource Include="Assets\Create.png" />
+    <Resource Include="Assets\Cut.png" />
+    <Resource Include="Assets\Help.png" />
+    <Resource Include="Assets\Info.png" />
+    <Resource Include="Assets\OIG3.ico" />
+    <Resource Include="Assets\OIG3.png" />
+    <Resource Include="Assets\Open.png" />
+    <Resource Include="Assets\Paste.png" />
+    <Resource Include="Assets\Play.png" />
+    <Resource Include="Assets\Return.png" />
+    <Resource Include="Assets\Save.png" />
+    <Resource Include="ManualPages\ManualAssets\CreateNewFile.png" />
+    <Resource Include="ManualPages\ManualAssets\MenuEdit.png" />
+    <Resource Include="ManualPages\ManualAssets\PanelTool.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LocalizationResources\LocalizationRes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizationRes.resx</DependentUpon>
+    </Compile>
+    <Compile Update="LocalizationResources\LocalizationRes.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizationRes.ru.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LocalizationResources\LocalizationRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizationRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocalizationResources\LocalizationRes.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizationRes.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Analyzer\" />
+  </ItemGroup>
+
+</Project>
